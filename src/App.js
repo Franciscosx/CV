@@ -11,8 +11,8 @@ export default function PortfolioLayout() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const name = "Francisco Jiménez";
   const role = "Software Engineer";
-  const [bio, setBio] = useState("I build accessible, inclusive products and digital experiences for the web.");
-  const [projects, setProjects] = useState([
+  const bio = "I build accessible, inclusive products and digital experiences for the web.";
+  const projects =[
     { id: 1, title: "React", icon: <FaReact />, description: "Description of Project 1" },
     { id: 2, title: "Tailwind CSS", icon: <RiTailwindCssFill /> },
     { id: 3, title: "JavaScript", icon: <IoLogoJavascript /> },
@@ -22,17 +22,13 @@ export default function PortfolioLayout() {
     { id: 7, title: "Responsive Design", icon: <DiResponsive /> },
     { id: 8, title: "LESS", icon: <FaLess /> },
     { id: 9, title: "HTML", icon: <FaHtml5 /> }
-  ]);
+  ];
   const edu = [{ id: 1, name: "Universidad Simón Bolívar", date: "2013-2017", var: "Business Organization" },
   { id: 2, name: "Instituto Técnico Jesús Obrero", date: "2008-2013", var: "Data Processing Technician" }
   ]
   const exp = [{ id: 1, name: "Greenbulk - Venezuela", date: "Nov 2022-Abr 2023", var: "Macros, JavaScript" }]
 
-  const handleEdit = (setter) => (event) => {
-    setter(event.target.value);
-  };
-
-  return (
+    return (
     <div className="min-h-screen bg-zinc-900 text-zinc-100">
       <header className="fixed top-0 left-0 right-0 z-50 bg-zinc-900/80 backdrop-blur-sm">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
