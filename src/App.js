@@ -30,8 +30,9 @@ export default function PortfolioLayout() {
   const exp = [{ id: 1, name: "Greenbulk - Venezuela", date: "Nov 2022-Abr 2023", var: "Macros, JavaScript" }]
 
   return (
+    
     <div className="min-h-screen bg-zinc-900 text-zinc-100">
-        {/*header*/}
+      {/*header*/}
       <header className="fixed top-0 left-0 right-0 z-50 bg-zinc-900/80 backdrop-blur-sm">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between h-16">
@@ -123,16 +124,17 @@ export default function PortfolioLayout() {
           </div>
         )}
       </header>
+      <div className="min-h-8"></div>
 
       <main className="pt-16">
         {/*about*/}
-        <section
-          id="about"
+        <section id="about"
           className="min-h-screen flex items-center justify-center"
         >
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <div class="flex justify-center items-center rounded-full">
-              <img class="rounded-full max-h-80" src="/fotocarnet.jpeg" alt="FranciscoJimenezalternate text" />
+              {/*image*/}
+              <img class="rounded-full max-h-64" src="/fotocarnet.jpeg" alt="FranciscoJimenezalternate text" />
             </div>
             <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold mb-4">
               <input
