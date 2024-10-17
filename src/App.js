@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 /*import { Menu, X, Github, Facebook, Instagram } from "lucide-react";*/
 import { FiFacebook, FiGithub} from "react-icons/fi";
-import { IoLogoJavascript } from "react-icons/io";
+import { IoLogoJavascript, IoIosMenu, IoIosClose } from "react-icons/io";
 import { FaSass, FaLess, FaReact, FaHtml5, FaInstagram} from "react-icons/fa";
 import { RiTailwindCssFill } from "react-icons/ri";
 import { SiTypescript, SiNextdotjs } from "react-icons/si";
@@ -61,9 +61,9 @@ export default function PortfolioLayout() {
             <div className="md:hidden">
               <button onClick={() => setIsMenuOpen(!isMenuOpen)}>
                 {isMenuOpen ? (
-                  <X className="h-6 w-6" />
+                  <IoIosClose className="h-6 w-6" />
                 ) : (
-                  <Menu className="h-6 w-6" />
+                  <IoIosMenu className="h-6 w-6" />
                 )}
               </button>
             </div>
