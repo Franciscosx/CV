@@ -9,8 +9,8 @@ import { DiResponsive } from "react-icons/di";
 
 export default function PortfolioLayout() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [name, setName] = useState("Francisco Jiménez");
-  const [role, setRole] = useState("Software Engineer");
+  const name = "Francisco Jiménez";
+  const role = "Software Engineer";
   const [bio, setBio] = useState("I build accessible, inclusive products and digital experiences for the web.");
   const [projects, setProjects] = useState([
     { id: 1, title: "React", icon: <FaReact />, description: "Description of Project 1" },
@@ -21,7 +21,7 @@ export default function PortfolioLayout() {
     { id: 6, title: "Next.js", icon: <SiNextdotjs /> },
     { id: 7, title: "Responsive Design", icon: <DiResponsive /> },
     { id: 8, title: "LESS", icon: <FaLess /> },
-    { id: 9, title: "HTML", icon: <FaHtml5 /> },
+    { id: 9, title: "HTML", icon: <FaHtml5 /> }
   ]);
   const edu = [{ id: 1, name: "Universidad Simón Bolívar", date: "2013-2017", var: "Business Organization" },
   { id: 2, name: "Instituto Técnico Jesús Obrero", date: "2008-2013", var: "Data Processing Technician" }
@@ -123,11 +123,11 @@ export default function PortfolioLayout() {
                 className="bg-transparent text-center w-full"
               />
             </h1>
-            <h2 className="text-2xl sm:text-3xl md:text-4xl text-zinc-400 mb-6">
+            <h2 className="text-3xl sm:text-8xl md:text-4xl text-zinc-400 mb-6">
               <input
                 type="text"
                 value={role}
-                className="bg-transparent text-center w-full"
+                className="leading-8 bg-transparent text-center w-full"
               />
             </h2>
             <p className="text-lg sm:text-xl md:text-2xl mb-8">
@@ -138,7 +138,7 @@ export default function PortfolioLayout() {
               />
             </p>
             <a href="#contact">
-              <button type="button" className="font-bold bg-zinc-200 text-zinc-900 hover:bg-zinc-400 bg-zinc-800 p-3 rounded-lg">
+              <button type="button" className="font-bold bg-zinc-200 text-zinc-900 hover:bg-zinc-200 bg-zinc-300 p-3 rounded-lg">
                 Contact
               </button>
             </a>
@@ -221,8 +221,8 @@ export default function PortfolioLayout() {
             </p>
             <div className="flex justify-center items-center gap-8">
 
-              <div className="w-1/3 bg-zinc-200 text-zinc-900 hover:bg-zinc-400 bg-zinc-800 p-3 rounded-lg">franciscojimnz@gmail.com</div>
-              <div className="w-1/3 bg-zinc-200 text-zinc-900 hover:bg-zinc-400 bg-zinc-800 p-3 rounded-lg">franciscojavier641@hotmail.com</div>
+              <div className="w-1/3 bg-zinc-300 text-zinc-800 hover:bg-zinc-400 bg-zinc-800 p-3 rounded-lg">franciscojimnz@gmail.com</div>
+              <div className="w-1/3 bg-zinc-300 text-zinc-800 hover:bg-zinc-400 bg-zinc-800 p-3 rounded-lg">franciscojavier641@hotmail.com</div>
 
             </div>
           </div>
