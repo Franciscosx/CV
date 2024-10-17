@@ -1,7 +1,8 @@
 import React, { useState } from "react";
-import { Menu, X, Github, Facebook, Instagram } from "lucide-react";
+/*import { Menu, X, Github, Facebook, Instagram } from "lucide-react";*/
+import { FiFacebook, FiGithub} from "react-icons/fi";
 import { IoLogoJavascript } from "react-icons/io";
-import { FaSass, FaLess, FaReact, FaHtml5 } from "react-icons/fa";
+import { FaSass, FaLess, FaReact, FaHtml5, FaInstagram} from "react-icons/fa";
 import { RiTailwindCssFill } from "react-icons/ri";
 import { SiTypescript, SiNextdotjs } from "react-icons/si";
 import { DiResponsive } from "react-icons/di";
@@ -232,13 +233,13 @@ export default function PortfolioLayout() {
             <p>&copy; 2024 Francisco Jiménez.</p>
             <div className="flex space-x-4">
               <a href="https://github.com/Franciscosx" className="text-zinc-400 hover:text-zinc-100">
-                <Github className="h-6 w-6" />
+                <FiGithub className="h-6 w-6" />
               </a>
               <a href="https://www.instagram.com/franciscojimenezsx" className="text-zinc-400 hover:text-zinc-100">
-                <Instagram className="h-6 w-6" />
+                <FaInstagram className="h-6 w-6" />
               </a>
               <a href="https://www.facebook.com/francisco.imnz/" className="text-zinc-400 hover:text-zinc-100">
-                <Facebook className="h-6 w-6" />
+                <FiFacebook className="h-6 w-6" />
               </a>
             </div>
           </div>
