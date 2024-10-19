@@ -6,9 +6,12 @@ import { FaSass, FaLess, FaReact, FaHtml5, FaInstagram } from "react-icons/fa";
 import { RiTailwindCssFill } from "react-icons/ri";
 import { SiTypescript, SiNextdotjs } from "react-icons/si";
 import { DiResponsive } from "react-icons/di";
+import { CiDark, CiLight  } from "react-icons/ci";
 
 
 export default function PortfolioLayout() {
+  const [darkMode, setDarkMode] = useState(false);
+  const [classDes, setclassDes] = useState("bg-zinc-900 text-zinc-100");
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const name = "Francisco Jiménez";
   const role = "Software Engineer";
@@ -29,17 +32,29 @@ export default function PortfolioLayout() {
   ]
   const exp = [{ id: 1, name: "Greenbulk - Venezuela", date: "Nov 2022-Abr 2023", var: "Macros, JavaScript" }]
 
+  const toggleDarkMode = () => {
+    setDarkMode((prevMode) => !prevMode);
+    setclassDes(darkMode ? `bg-zinc-900 text-zinc-100` : `bg-zinc-100 text-zinc-900 `);
+  };
+
   return (
-    
-    <div className="min-h-screen bg-zinc-900 text-zinc-100">
+
+    <div className={`min-h-screen ${classDes}`}>
       {/*header*/}
-      <header className="fixed top-0 left-0 right-0 z-50 bg-zinc-900/80 backdrop-blur-sm">
+      <header className={`fixed top-0 left-0 right-0 z-50 ${classDes} opacity-80 backdrop-blur-sm`}>
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between h-16">
-            <div className="flex items-center">
-              <a href="#" className="text-xl font-bold">
+            <div className="flex items-center gap-x-5">
+              <a href="#about" className="text-xl font-bold">
                 FJ
               </a>
+              <button onClick={toggleDarkMode} className={`px-2 py-2 rounded-full text-xl
+              ${darkMode ? 'text-gray-900' : 'text-white'}
+              ${darkMode ? 'bg-gray-100 hover:bg-gray-300' : 'bg-gray-900 hover:bg-gray-700'} bold transition-colors duration-300`
+              }
+              >
+                {darkMode ? <CiDark/> : <CiLight/>}
+              </button>
             </div>
             {/*links*/}
             <nav className="hidden md:block">
@@ -124,9 +139,11 @@ export default function PortfolioLayout() {
           </div>
         )}
       </header>
+
       <div className="min-h-8"></div>
 
       <main className="pt-16">
+
         {/*about*/}
         <section id="about"
           className="min-h-screen flex items-center justify-center"
@@ -134,7 +151,7 @@ export default function PortfolioLayout() {
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <div class="flex justify-center items-center rounded-full">
               {/*image*/}
-              <img class="rounded-full max-h-64" src="/fotocarnet.jpeg" alt="FranciscoJimenezalternate text" />
+              <img class="rounded-full max-h-64" src="/fotocarnet.jpeg" alt="FranciscoJimenez" />
             </div>
             <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold mb-4">
               <input
@@ -158,13 +175,12 @@ export default function PortfolioLayout() {
               />
             </p>
             <a href="#contact">
-              <button type="button" className="font-bold bg-zinc-200 text-zinc-900 hover:bg-zinc-200 bg-zinc-300 p-3 rounded-lg">
+              <button type="button" className="font-bold bg-zinc-300 text-zinc-900 p-3 rounded-lg hover:bg-zinc-200 text-zinc-100">
                 Contact
               </button>
             </a>
           </div>
         </section>
-
         {/*experience*/}
         <section id="expe" className="py-16">
           <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -238,7 +254,6 @@ export default function PortfolioLayout() {
             </div>
           </div>
         </section>
-
         {/*contact*/}
         <section id="contact" className="py-16 bg-zinc-800">
           <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
