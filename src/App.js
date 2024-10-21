@@ -1,12 +1,11 @@
 import React, { useState } from "react";
-/*import { Menu, X, Github, Facebook, Instagram } from "lucide-react";*/
 import { FiFacebook, FiGithub } from "react-icons/fi";
 import { IoLogoJavascript, IoIosMenu, IoIosClose } from "react-icons/io";
 import { FaSass, FaLess, FaReact, FaHtml5, FaInstagram } from "react-icons/fa";
 import { RiTailwindCssFill } from "react-icons/ri";
 import { SiTypescript, SiNextdotjs } from "react-icons/si";
 import { DiResponsive } from "react-icons/di";
-import { CiDark, CiLight  } from "react-icons/ci";
+import { CiDark, CiLight } from "react-icons/ci";
 
 
 export default function PortfolioLayout() {
@@ -40,8 +39,8 @@ export default function PortfolioLayout() {
   return (
 
     <div className={`min-h-screen ${classDes}`}>
-      {/*header*/}
-      <header className={`fixed top-0 left-0 right-0 z-50 ${classDes} opacity-80 backdrop-blur-sm`}>
+      {/*header (links, hambg menu)*/}
+      <header className={`fixed top-0 left-0 right-0 z-50 opacity-80 backdrop-blur-sm`}>
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between h-16">
             <div className="flex items-center gap-x-5">
@@ -53,29 +52,29 @@ export default function PortfolioLayout() {
               ${darkMode ? 'bg-gray-100 hover:bg-gray-300' : 'bg-gray-900 hover:bg-gray-700'} bold transition-colors duration-300`
               }
               >
-                {darkMode ? <CiDark/> : <CiLight/>}
+                {darkMode ? <CiDark /> : <CiLight />}
               </button>
             </div>
             {/*links*/}
             <nav className="hidden md:block">
               <ul className="flex space-x-4">
                 <li>
-                  <a href="#expe" className="hover:text-zinc-300">
+                  <a href="#expe" className="hover:text-zinc-400">
                     Experience
                   </a>
                 </li>
                 <li>
-                  <a href="#skills" className="hover:text-zinc-300">
+                  <a href="#skills" className="hover:text-zinc-400">
                     Skills
                   </a>
                 </li>
                 <li>
-                  <a href="#education" className="hover:text-zinc-300">
+                  <a href="#education" className="hover:text-zinc-400">
                     Education
                   </a>
                 </li>
                 <li>
-                  <a href="#contact" className="hover:text-zinc-300">
+                  <a href="#contact" className="hover:text-zinc-400">
                     Contact
                   </a>
                 </li>
@@ -102,7 +101,7 @@ export default function PortfolioLayout() {
               <li>
                 <a
                   href="#expe"
-                  className="block px-3 py-2 hover:bg-zinc-800"
+                  className="block px-3 py-2 hover:bg-zinc-400"
                   onClick={() => setIsMenuOpen(false)}
                 >
                   Experience
@@ -111,7 +110,7 @@ export default function PortfolioLayout() {
               <li>
                 <a
                   href="#projects"
-                  className="block px-3 py-2 hover:bg-zinc-800"
+                  className="block px-3 py-2 hover:bg-zinc-400"
                   onClick={() => setIsMenuOpen(false)}
                 >
                   Skills
@@ -120,7 +119,7 @@ export default function PortfolioLayout() {
               <li>
                 <a
                   href="#education"
-                  className="block px-3 py-2 hover:bg-zinc-800"
+                  className="block px-3 py-2 hover:bg-zinc-400"
                   onClick={() => setIsMenuOpen(false)}
                 >
                   Education
@@ -129,7 +128,7 @@ export default function PortfolioLayout() {
               <li>
                 <a
                   href="#contact"
-                  className="block px-3 py-2 hover:bg-zinc-800"
+                  className="block px-3 py-2 hover:bg-zinc-400"
                   onClick={() => setIsMenuOpen(false)}
                 >
                   Contact
@@ -187,7 +186,7 @@ export default function PortfolioLayout() {
             <h2 className="text-3xl font-bold mb-8">Experience</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {exp.map((ex) => (
-                <div key={ex.id} className="bg-zinc-800 p-6 rounded-lg">
+                <div key={ex.id} className={`${darkMode ? `bg-zinc-200 text-zinc-900` : `bg-zinc-800 text-zinc-100 `} p-6 rounded-lg`}>
                   <input
                     aria-label={ex.id}
                     type="text"
@@ -197,7 +196,7 @@ export default function PortfolioLayout() {
                   <textarea
                     aria-label={ex.id}
                     value={ex.var}
-                    className="text-zinc-300 bg-transparent w-full resize-none"
+                    className="max-h-8 text-zinc-400 bg-transparent w-full resize-none"
                     rows={3}
                   />
                   <p>{ex.date}</p>
@@ -212,7 +211,7 @@ export default function PortfolioLayout() {
             <h2 className="text-3xl font-bold mb-8">Skills</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {projects.map((project) => (
-                <div key={project.id} className="bg-zinc-800 p-2 rounded-lg flex justify-center items-center">
+                <div key={project.id} className={`${darkMode ? `bg-zinc-200 text-zinc-900` : `bg-zinc-800 text-zinc-100`} p-6 rounded-lg p-2 rounded-lg flex justify-center items-center`}>
                   <input
                     aria-label={project.id}
                     type="text"
@@ -233,7 +232,7 @@ export default function PortfolioLayout() {
             <h2 className="text-3xl font-bold mb-8">Education</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {edu.map((ed) => (
-                <div key={ed.id} className="bg-zinc-800 p-6 rounded-lg">
+                <div key={ed.id} className={`${darkMode ? `bg-zinc-200 text-zinc-900` : `bg-zinc-800 text-zinc-100 `} p-6 rounded-lg`}>
                   <input
                     aria-label={ed.id}
                     type="text"
@@ -243,7 +242,7 @@ export default function PortfolioLayout() {
                   <textarea
                     aria-label={ed.id}
                     value={ed.var}
-                    className="text-zinc-300 bg-transparent w-full resize-none"
+                    className="text-zinc-400 bg-transparent w-full resize-none"
                     rows={3}
                   />
                   <p>
@@ -255,7 +254,7 @@ export default function PortfolioLayout() {
           </div>
         </section>
         {/*contact*/}
-        <section id="contact" className="py-16 bg-zinc-800">
+        <section id="contact" className={`${darkMode ? `bg-zinc-200 text-zinc-900` : `bg-zinc-800 text-zinc-100`} py-16`}>
           <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <h2 className="text-3xl font-bold mb-8">Get in Touch</h2>
             <p className="text-lg mb-8">
@@ -273,7 +272,7 @@ export default function PortfolioLayout() {
       </main>
 
       {/*footer*/}
-      <footer className="bg-zinc-900 py-8">
+      <footer className={`${classDes} py-8`}>
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center">
             <p>&copy; 2024 Francisco Jiménez.</p>
@@ -292,6 +291,6 @@ export default function PortfolioLayout() {
         </div>
       </footer>
 
-    </div>
+    </div >
   );
 }
