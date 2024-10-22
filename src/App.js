@@ -259,11 +259,11 @@ export default function PortfolioLayout() {
             <div className="flex justify-center items-center gap-8">
 
               <div class="grid gap-4 grid-cols-1 md:grid-cols-2">
-                <a href="mailto:franciscojimnz@gmail.com">
-                  <button className="bg-zinc-400 text-zinc-800 hover:bg-zinc-300  p-3 rounded-lg">franciscojimnz@gmail.com</button>
+                <a className="" href="mailto:franciscojimnz@gmail.com">
+                  <button className="w-full bg-zinc-400 text-zinc-800 hover:bg-zinc-300  p-3 rounded-lg">franciscojimnz@gmail.com</button>
                 </a>
                 <a href="mailto:franciscojavier641@hotmail.com">
-                  <button className="bg-zinc-400 text-zinc-800 hover:bg-zinc-300  p-3 rounded-lg">franciscojavier641@hotmail.com</button>
+                  <button className="w-full bg-zinc-400 text-zinc-800 hover:bg-zinc-300  p-3 rounded-lg">franciscojavier641@hotmail.com</button>
                 </a>
               </div>
 
