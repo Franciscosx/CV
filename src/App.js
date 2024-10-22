@@ -44,7 +44,7 @@ export default function PortfolioLayout() {
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between h-16">
             <div className="flex items-center gap-x-5">
-              <a href="#about" className="text-xl font-bold">
+              <a href="#mainabout" className="text-xl font-bold">
                 FJ
               </a>
               <button onClick={toggleDarkMode} className={`px-2 py-2 rounded-full text-xl
@@ -139,9 +139,9 @@ export default function PortfolioLayout() {
         )}
       </header>
 
-      <div className="min-h-8"></div>
+      <div id="mainabout" className="min-h-8"></div>
 
-      <main className="pt-16">
+      <main className="pt-8">
 
         {/*about*/}
         <section id="about"
@@ -153,25 +153,24 @@ export default function PortfolioLayout() {
               <img class="rounded-full max-h-64" src="/fotocarnet.jpeg" alt="FranciscoJimenez" />
             </div>
             <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold mb-4">
-              <input
-                type="text"
+              <p
                 value={name}
                 className="bg-transparent text-center w-full"
-              />
+              >{name}</p>
             </h1>
             <h2 className="text-3xl sm:text-8xl md:text-4xl text-zinc-400 mb-6">
-              <input
+              <p
                 type="text"
                 value={role}
                 className="leading-8 bg-transparent text-center w-full"
-              />
+              >{role}</p>
             </h2>
             <p className="text-lg sm:text-xl md:text-2xl mb-8">
-              <textarea
+              <p
                 value={bio}
                 className="bg-transparent text-center w-full resize-none"
                 rows={3}
-              />
+              >{bio}</p>
             </p>
             <a href="#contact">
               <button type="button" className="font-bold bg-zinc-300 text-zinc-900 p-3 rounded-lg hover:bg-zinc-200 text-zinc-100">
@@ -187,18 +186,17 @@ export default function PortfolioLayout() {
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {exp.map((ex) => (
                 <div key={ex.id} className={`${darkMode ? `bg-zinc-200 text-zinc-900` : `bg-zinc-800 text-zinc-100 `} p-6 rounded-lg`}>
-                  <input
+                  <p
                     aria-label={ex.id}
-                    type="text"
                     value={ex.name}
-                    className="text-xl font-bold mb-2 bg-transparent w-full"
-                  />
-                  <textarea
+                    className="text-xl font-bold bg-transparent w-full"
+                  >{ex.name}</p>
+                  <p
                     aria-label={ex.id}
                     value={ex.var}
-                    className="max-h-8 text-zinc-400 bg-transparent w-full resize-none"
+                    className=" text-zinc-400 bg-transparent w-full resize-none pt-2 pb-2"
                     rows={3}
-                  />
+                  >{ex.var}</p>
                   <p>{ex.date}</p>
                 </div>
               ))}
@@ -212,13 +210,12 @@ export default function PortfolioLayout() {
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {projects.map((project) => (
                 <div key={project.id} className={`${darkMode ? `bg-zinc-200 text-zinc-900` : `bg-zinc-800 text-zinc-100`} p-6 rounded-lg p-2 rounded-lg flex justify-center items-center`}>
-                  <input
+                  <p
                     aria-label={project.id}
-                    type="text"
                     value={project.title}
-                    className="text-xl font-bold mb-2 bg-transparent"
-                  />
-                  <div className="self-auto size-3 text-3xl font-bold mb-5">
+                    className="text-left text-xl font-bold mb-2 bg-transparent w-1/2"
+                  >{project.title}</p>
+                  <div className="self-auto size-3 text-3xl font-bold mb-6 ">
                     {project.icon}
                   </div>
                 </div>
@@ -233,18 +230,17 @@ export default function PortfolioLayout() {
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {edu.map((ed) => (
                 <div key={ed.id} className={`${darkMode ? `bg-zinc-200 text-zinc-900` : `bg-zinc-800 text-zinc-100 `} p-6 rounded-lg`}>
-                  <input
+                  <p
                     aria-label={ed.id}
-                    type="text"
                     value={ed.name}
                     className="text-xl font-bold mb-2 bg-transparent w-full"
-                  />
-                  <textarea
+                  >{ed.name}</p>
+                  <p
                     aria-label={ed.id}
                     value={ed.var}
-                    className="text-zinc-400 bg-transparent w-full resize-none"
+                    className="text-left text-zinc-400 bg-transparent w-full resize-none pt-2 pb-2"
                     rows={3}
-                  />
+                  >{ed.var}</p>
                   <p>
                     {ed.date}
                   </p>
