@@ -279,13 +279,13 @@ export default function PortfolioLayout() {
           <div className="flex justify-between items-center">
             <p>&copy; 2024 Francisco Jiménez.</p>
             <div className="flex space-x-4">
-              <a href="https://github.com/Franciscosx" className="text-zinc-400 hover:text-zinc-100">
+              <a href="https://github.com/Franciscosx" className="text-zinc-400 hover:text-zinc-100" target="_blank" rel="noopener noreferrer">
                 <FiGithub className="h-6 w-6" />
               </a>
-              <a href="https://www.instagram.com/franciscojimenezsx" className="text-zinc-400 hover:text-zinc-100">
+              <a href="https://www.instagram.com/franciscojimenezsx" className="text-zinc-400 hover:text-zinc-100" target="_blank" rel="noopener noreferrer">
                 <FaInstagram className="h-6 w-6" />
               </a>
-              <a href="https://www.facebook.com/francisco.imnz/" className="text-zinc-400 hover:text-zinc-100">
+              <a href="https://www.facebook.com/francisco.imnz/" className="text-zinc-400 hover:text-zinc-100" target="_blank" rel="noopener noreferrer">
                 <FiFacebook className="h-6 w-6" />
               </a>
             </div>
