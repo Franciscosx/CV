@@ -13,8 +13,8 @@ export default function PortfolioLayout() {
   const [classDes, setclassDes] = useState("bg-zinc-900 text-zinc-100");
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const name = "Francisco Jiménez";
-  const role = "Software Engineer";
-  const bio = "I build accessible, inclusive products and digital experiences for the web.";
+  const role = "Web Developer";
+  const bio = "Building digital experiences for the web.";
   const projects = [
     { id: 1, title: "React", icon: <FaReact />, description: "Description of Project 1" },
     { id: 2, title: "Tailwind CSS", icon: <RiTailwindCssFill /> },
@@ -29,7 +29,7 @@ export default function PortfolioLayout() {
   const edu = [{ id: 1, name: "Universidad Simón Bolívar", date: "2013-2017", var: "Business Organization" },
   { id: 2, name: "Instituto Técnico Jesús Obrero", date: "2008-2013", var: "Data Processing Technician" }
   ]
-  const exp = [{ id: 1, name: "Greenbulk - Venezuela", date: "Nov 2022-Abr 2023", var: "Macros, JavaScript" }]
+  const exp = [{ id: 1, name: "Greenbulk - Venezuela", date: "Nov 2022-Abr 2025", var: "Macros, JavaScript" }]
 
   const toggleDarkMode = () => {
     setDarkMode((prevMode) => !prevMode);
@@ -277,7 +277,7 @@ export default function PortfolioLayout() {
       <footer className={`${classDes} py-8`}>
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center">
-            <p>&copy; 2024 Francisco Jiménez.</p>
+            <p>&copy; 2026 Francisco Jiménez.</p>
             <div className="flex space-x-4">
               <a href="https://github.com/Franciscosx" className="text-zinc-400 hover:text-zinc-100" target="_blank" rel="noopener noreferrer">
                 <FiGithub className="h-6 w-6" />
